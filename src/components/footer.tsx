@@ -40,7 +40,7 @@ const Footer = () => {
 						<h3 className="text-lg font-semibold mb-4">Follow Us</h3>
 						<div className="flex space-x-4">
 							<Link
-								href="https://www.facebook.com/p/Sarthi-Seva-Sansthan-%E0%A4%B8%E0%A4%BE%E0%A4%B0%E0%A4%A5%E0%A5%80-%E0%A4%B8%E0%A5%87%E0%A4%B5%E0%A4%BE-%E0%A4%B8%E0%A4%82%E0%A4%B8%E0%A5%8D%E0%A4%A5%E0%A4%BE%E0%A4%A8-100077989894794/"
+								href="https://www.facebook.com/share/1KnMEixm8R/"
 								className="hover:text-red-200"
 								target="_blank"
 							>

@@ -126,7 +126,7 @@ export default function Contact() {
 					<h2 className="text-3xl font-bold mb-8">Connect With Us</h2>
 					<div className="flex justify-center gap-8">
 						<a
-							href="https://www.facebook.com/p/Sarthi-Seva-Sansthan-%E0%A4%B8%E0%A4%BE%E0%A4%B0%E0%A4%A5%E0%A5%80-%E0%A4%B8%E0%A5%87%E0%A4%B5%E0%A4%BE-%E0%A4%B8%E0%A4%82%E0%A4%B8%E0%A5%8D%E0%A4%A5%E0%A4%BE%E0%A4%A8-100077989894794/"
+							href="https://www.facebook.com/share/1KnMEixm8R/"
 							// className="group"
 							target="_blank"
 							rel="noreferrer"
