@@ -95,9 +95,9 @@ export default function Contact() {
 							</CardHeader>
 							<CardContent>
 								<p className="text-gray-600">+91 8400834051</p>
-								<p className="text-sm text-gray-500 mt-1">
+								{/* <p className="text-sm text-gray-500 mt-1">
 									Available 9 AM - 6 PM IST
-								</p>
+								</p> */}
 							</CardContent>
 						</Card>
 					</div>
@@ -165,7 +165,7 @@ export default function Contact() {
 			</section>
 
 			{/* Working Hours */}
-			<section className="py-16 bg-gradient-to-r from-red-600 to-pink-600 text-white">
+			{/* <section className="py-16 bg-gradient-to-r from-red-600 to-pink-600 text-white">
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
 					<h2 className="text-3xl font-bold mb-4">Working Hours</h2>
 					<p className="text-xl mb-8">
@@ -184,7 +184,7 @@ export default function Contact() {
 						</div>
 					</div>
 				</div>
-			</section>
+			</section> */}
 		</div>
 	);
 }
