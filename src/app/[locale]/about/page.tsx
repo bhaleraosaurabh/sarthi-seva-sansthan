@@ -1,8 +1,119 @@
+import { Card, CardContent } from "@/components/ui/card";
+import { Separator } from "@/components/ui/separator";
 import { Users } from "@phosphor-icons/react/dist/ssr";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function About() {
+	const members = [
+		{
+			name: "Dhan Ji Pandey",
+			designation: "Treasurer",
+			image: "/dhan_ji_pandey.jpg",
+		},
+		{
+			name: "Priyanka Kumari",
+			designation: "",
+			image: "/priyanka_kumari.jpg",
+		},
+		{
+			name: "Abhishek Singh",
+			designation: "",
+			image: "/abhishek_singh.jpg",
+		},
+		{
+			name: "Rohit Sharma",
+			designation: "",
+			image: "/rohit_sharma.jpg",
+		},
+		{
+			name: "Prince Giri",
+			designation: "",
+			image: "/prince_giri.jpg",
+		},
+		{
+			name: "Shikha",
+			designation: "Designation 4",
+			image: "/shikha.jpg",
+		},
+	];
+	const sections = [
+		{
+			title: "2019–2022: Early Years of Service",
+			content: [
+				{
+					heading: "Foundation and Motivation",
+					points: [
+						"The organization began informally under the leadership of Sanjeev Giri.",
+						"Initial efforts focused on providing basic support to the poor, assisting accident victims, and feeding street animals.",
+					],
+				},
+				{
+					heading: "Community Impact",
+					points: [
+						"Distributed food, clothing, and medicines to needy families.",
+						"Assisted flood-affected families in Ballia, providing shelter and rehabilitation.",
+						"Promoted blood donation and encouraged individuals to contribute to saving lives.",
+					],
+				},
+				{
+					heading: "COVID-19 Relief Efforts",
+					points: [
+						"Distributed food, masks, and sanitizers.",
+						"Facilitated transportation for stranded migrant workers and continued feeding stray animals.",
+					],
+				},
+			],
+		},
+		{
+			title: "2023: Official Registration and Formalization",
+			content: [
+				{
+					heading: "Government Registration",
+					points: [
+						"In 2023, Shri Sarthi Seva Sansthan was officially registered.",
+					],
+				},
+				{
+					heading: "Expanded Efforts",
+					points: [
+						"Advocated for the establishment of a medical college in Ballia.",
+						"Organized large-scale blood donation drives, flood relief efforts, and community support programs.",
+					],
+				},
+			],
+		},
+		{
+			title: "2024: Strengthening the Mission",
+			content: [
+				{
+					heading: "Healthcare and Advocacy",
+					points: [
+						"Continued the fight for improved healthcare facilities in Ballia.",
+						"Assisted numerous individuals with medical needs.",
+					],
+				},
+			],
+		},
+		{
+			title: "2025: Continuing the Legacy of Service",
+			content: [
+				{
+					heading: "Enhanced Operations",
+					points: [
+						"By 2025, Shri Sarthi Seva Sansthan has become a well-respected name in the region.",
+					],
+				},
+				{
+					heading: "Future Vision",
+					points: [
+						"Aiming to build educational and vocational training centers for the poor.",
+						"Expanding environmental programs to combat climate change.",
+					],
+				},
+			],
+		},
+	];
 	return (
 		<div>
 			{/* Hero Section */}
@@ -15,81 +126,6 @@ export default function About() {
 					</p>
 				</div>
 			</section>
-
-			{/* Mission & Vision */}
-			{/* <section className="py-16">
-				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-					<div className="grid md:grid-cols-2 gap-12">
-						<div className="bg-white p-8 rounded-lg shadow-md border border-gray-100">
-							<h2 className="text-2xl font-bold mb-4 text-red-600">
-								Our Mission
-							</h2>
-							<p className="text-gray-600 mb-4">
-								To work towards the comprehensive development and empowerment of
-								marginalized and underprivileged communities through sustainable
-								initiatives in education, healthcare, livelihood generation, and
-								social welfare.
-							</p>
-							<ul className="space-y-2 text-gray-600">
-								<li className="flex items-start">
-									<Heart
-										className="mr-2 text-pink-600 flex-shrink-0 mt-1"
-										size={20}
-									/>
-									<span>Promote quality education for all</span>
-								</li>
-								<li className="flex items-start">
-									<Heart
-										className="mr-2 text-pink-600 flex-shrink-0 mt-1"
-										size={20}
-									/>
-									<span>Enhance healthcare accessibility</span>
-								</li>
-								<li className="flex items-start">
-									<Heart
-										className="mr-2 text-pink-600 flex-shrink-0 mt-1"
-										size={20}
-									/>
-									<span>Support livelihood generation</span>
-								</li>
-							</ul>
-						</div>
-						<div className="bg-white p-8 rounded-lg shadow-md border border-gray-100">
-							<h2 className="text-2xl font-bold mb-4 text-red-600">
-								Our Vision
-							</h2>
-							<p className="text-gray-600 mb-4">
-								To create an equitable society where every individual has the
-								opportunity to lead a life of dignity, self-reliance, and
-								fulfillment.
-							</p>
-							<ul className="space-y-2 text-gray-600">
-								<li className="flex items-start">
-									<Medal
-										className="mr-2 text-orange-500 flex-shrink-0 mt-1"
-										size={20}
-									/>
-									<span>Foster sustainable development</span>
-								</li>
-								<li className="flex items-start">
-									<Medal
-										className="mr-2 text-orange-500 flex-shrink-0 mt-1"
-										size={20}
-									/>
-									<span>Empower through social awareness</span>
-								</li>
-								<li className="flex items-start">
-									<Medal
-										className="mr-2 text-orange-500 flex-shrink-0 mt-1"
-										size={20}
-									/>
-									<span>Collaborate for greater impact</span>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</section> */}
 
 			{/* Leadership */}
 			<section className="py-16 bg-red-50">
@@ -140,53 +176,69 @@ export default function About() {
 				</div>
 			</section>
 
+			{/* Members Section */}
+			<section className="py-16 bg-gray-50">
+				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+					<h2 className="text-3xl font-bold text-center mb-12">Our Members</h2>
+					<div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+						{members.map((member, index) => (
+							<div key={index.toString()} className="text-center">
+								<div className="w-40 h-40 mx-auto bg-gray-100 rounded-full overflow-hidden">
+									<Image
+										src={member.image}
+										alt={member.name}
+										className="w-full h-full object-cover"
+										width={160}
+										height={160}
+									/>
+								</div>
+								<h3 className="text-xl font-semibold mt-4">{member.name}</h3>
+								<p className="text-red-600">{member.designation}</p>
+							</div>
+						))}
+					</div>
+				</div>
+			</section>
+
 			{/* Journey Timeline */}
 			<section className="py-16">
-				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-					<h2 className="text-3xl font-bold text-center mb-12">Our Journey</h2>
-					<div className="space-y-8">
-						<div className="flex flex-col md:flex-row gap-4">
-							<div className="md:w-1/4">
-								<h3 className="text-2xl font-bold text-red-600">2019-2022</h3>
-								<p className="text-gray-600">Early Years of Service</p>
-							</div>
-							<div className="md:w-3/4 bg-white p-6 rounded-lg shadow-md">
-								<p className="text-gray-600">
-									Started as an informal initiative, focusing on basic support
-									for the poor, accident victims, and animal welfare. Played a
-									crucial role during the COVID-19 pandemic.
-								</p>
-							</div>
-						</div>
-						<div className="flex flex-col md:flex-row gap-4">
-							<div className="md:w-1/4">
-								<h3 className="text-2xl font-bold text-pink-600">2023</h3>
-								<p className="text-gray-600">Official Registration</p>
-							</div>
-							<div className="md:w-3/4 bg-white p-6 rounded-lg shadow-md">
-								<p className="text-gray-600">
-									Achieved formal recognition through government registration,
-									expanding our reach and impact through various welfare
-									programs.
-								</p>
-							</div>
-						</div>
-						<div className="flex flex-col md:flex-row gap-4">
-							<div className="md:w-1/4">
-								<h3 className="text-2xl font-bold text-orange-500">
-									2024-2025
-								</h3>
-								<p className="text-gray-600">Growth & Impact</p>
-							</div>
-							<div className="md:w-3/4 bg-white p-6 rounded-lg shadow-md">
-								<p className="text-gray-600">
-									Strengthened our initiatives in healthcare, education, and
-									environmental conservation while expanding our reach to more
-									communities.
-								</p>
-							</div>
-						</div>
-					</div>
+				<div className="max-w-4xl mx-auto p-6 space-y-6">
+					<h1 className="text-3xl font-bold text-center">
+						Journey of Shri Sarthi Seva Sansthan (2019–2025)
+					</h1>
+
+					<Card>
+						<CardContent className="p-6 space-y-4">
+							<p>
+								Shri Sarthi Seva Sansthan, founded by Sanjeev Giri in 2019, is a
+								grassroots organization born out of a deep commitment to social
+								welfare. Despite starting as an unregistered initiative, the
+								Sansthan quickly gained recognition for its impactful work in
+								Ballia and surrounding regions. Officially registered under the
+								government in 2023, the organization continues its mission to
+								serve society in 2025, with an expanded vision and reach.
+							</p>
+						</CardContent>
+					</Card>
+
+					{sections.map((section, index) => (
+						<Card key={index.toString()}>
+							<CardContent className="p-6 space-y-4">
+								<h2 className="text-2xl font-semibold">{section.title}</h2>
+								<Separator />
+								{section.content.map((item, i) => (
+									<div key={i.toString()} className="space-y-2">
+										<h3 className="text-xl font-medium">{item.heading}</h3>
+										<ul className="list-disc list-inside space-y-1">
+											{item.points.map((point, j) => (
+												<li key={j.toString()}>{point}</li>
+											))}
+										</ul>
+									</div>
+								))}
+							</CardContent>
+						</Card>
+					))}
 				</div>
 			</section>
 
