@@ -1,3 +1,6 @@
+"use client";
+
+import { Button } from "@/components/ui/button";
 import {
 	Card,
 	CardContent,
@@ -6,35 +9,85 @@ import {
 	CardTitle,
 } from "@/components/ui/card";
 import {
+	Form,
+	FormControl,
+	FormField,
+	FormItem,
+	FormLabel,
+	FormMessage,
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { toast } from "@/hooks/use-toast";
+import { zodResolver } from "@hookform/resolvers/zod";
+import {
 	Envelope,
 	FacebookLogo,
 	InstagramLogo,
 	MapPin,
 	Phone,
 	TwitterLogo,
-} from "@phosphor-icons/react/dist/ssr";
+} from "@phosphor-icons/react";
+import { useTranslations } from "next-intl";
+import { useState } from "react";
+import { useForm } from "react-hook-form";
+import { z } from "zod";
 
-// Dynamically import the Map component with no SSR
-// const ContactMap = dynamic(() => import("@/components/map"), {
-// 	ssr: true,
-// 	loading: () => (
-// 		<div className="w-full h-[500px] flex items-center justify-center bg-gray-100 rounded-lg">
-// 			<div className="animate-pulse text-gray-500">Loading map...</div>
-// 		</div>
-// 	),
-// });
+const ContactSchema = z.object({
+	name: z.string().min(2, "Name must be at least 2 characters"),
+	contact: z
+		.string()
+		.min(10, "Invalid phone number")
+		.max(15, "Invalid phone number"),
+	bloodGroup: z.string().min(1, "Blood group is required"),
+});
 
 export default function Contact() {
+	const form = useForm({
+		resolver: zodResolver(ContactSchema),
+		defaultValues: { name: "", contact: "", bloodGroup: "" },
+	});
+	const t = useTranslations("contact");
+	const [loading, setLoading] = useState(false);
+
+	const onSubmit = async (data: z.infer<typeof ContactSchema>) => {
+		setLoading(true);
+		try {
+			const res = await fetch("/api/contact", {
+				method: "POST",
+				headers: { "Content-Type": "application/json" },
+				body: JSON.stringify(data),
+			});
+
+			if (res.ok) {
+				toast({
+					title: t("success_message"),
+					description: t("success_message_description"),
+				});
+				form.reset(); // Reset form after successful submission
+			} else {
+				toast({
+					title: t("error"),
+					description: t("error_message"),
+					variant: "destructive",
+				});
+			}
+		} catch (error) {
+			toast({
+				title: t("error"),
+				description: t("error_message"),
+				variant: "destructive",
+			});
+		} finally {
+			setLoading(false);
+		}
+	};
 	return (
 		<div>
 			{/* Hero Section */}
 			<section className="relative py-20 bg-red-600 text-white">
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-					<h1 className="text-4xl md:text-5xl font-bold mb-4">Contact Us</h1>
-					<p className="text-xl max-w-3xl">
-						Get in touch with us to learn more about our initiatives or to
-						contribute to our cause.
-					</p>
+					<h1 className="text-4xl md:text-5xl font-bold mb-4">{t("title")}</h1>
+					<p className="text-xl max-w-3xl">{t("description")}</p>
 				</div>
 			</section>
 
@@ -49,13 +102,13 @@ export default function Contact() {
 										<MapPin className="h-6 w-6 text-red-600" />
 									</div>
 									<div>
-										<CardTitle>Visit Us</CardTitle>
-										<CardDescription>Our Location</CardDescription>
+										<CardTitle>{t("visit")}</CardTitle>
+										<CardDescription>{t("visit_description")}</CardDescription>
 									</div>
 								</div>
 							</CardHeader>
 							<CardContent>
-								<p className="text-gray-600">Ballia, Uttar Pradesh, India</p>
+								<p className="text-gray-600">{t("address")}</p>
 							</CardContent>
 						</Card>
 
@@ -66,8 +119,8 @@ export default function Contact() {
 										<Envelope className="h-6 w-6 text-red-600" />
 									</div>
 									<div>
-										<CardTitle>Email Us</CardTitle>
-										<CardDescription>Get in Touch</CardDescription>
+										<CardTitle>{t("email")}</CardTitle>
+										<CardDescription>{t("email_description")}</CardDescription>
 									</div>
 								</div>
 							</CardHeader>
@@ -88,13 +141,13 @@ export default function Contact() {
 										<Phone className="h-6 w-6 text-red-600" />
 									</div>
 									<div>
-										<CardTitle>Call Us</CardTitle>
-										<CardDescription>Speak with Us</CardDescription>
+										<CardTitle>{t("call")}</CardTitle>
+										<CardDescription>{t("call_description")}</CardDescription>
 									</div>
 								</div>
 							</CardHeader>
 							<CardContent>
-								<p className="text-gray-600">+91 8400834051</p>
+								<p className="text-gray-600">{t("phone")}</p>
 								{/* <p className="text-sm text-gray-500 mt-1">
 									Available 9 AM - 6 PM IST
 								</p> */}
@@ -103,27 +156,83 @@ export default function Contact() {
 					</div>
 				</div>
 			</section>
-
-			{/* Map Section */}
 			<section className="py-16 bg-red-50">
-				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-					<div className="text-center mb-12">
-						<h2 className="text-3xl font-bold mb-4">Find Us on Map</h2>
-						<p className="text-gray-600 max-w-2xl mx-auto">
-							Visit our office to learn more about our initiatives and how you
-							can contribute to our cause.
-						</p>
-					</div>
-					{/* <div className="rounded-lg shadow-lg overflow-hidden">
-						<ContactMap />
-					</div> */}
+				<div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
+					<Card>
+						<CardHeader>
+							<CardTitle>{t("form_title")}</CardTitle>
+						</CardHeader>
+						<CardContent>
+							<Form {...form}>
+								<form
+									onSubmit={form.handleSubmit(onSubmit)}
+									className="space-y-4"
+								>
+									<FormField
+										control={form.control}
+										name="name"
+										render={({ field }) => (
+											<FormItem>
+												<FormLabel>{t("name")}</FormLabel>
+												<FormControl>
+													<Input
+														placeholder={t("name_placeholder")}
+														{...field}
+													/>
+												</FormControl>
+												<FormMessage />
+											</FormItem>
+										)}
+									/>
+
+									<FormField
+										control={form.control}
+										name="contact"
+										render={({ field }) => (
+											<FormItem>
+												<FormLabel>{t("contact")}</FormLabel>
+												<FormControl>
+													<Input
+														placeholder={t("contact_palceholder")}
+														{...field}
+													/>
+												</FormControl>
+												<FormMessage />
+											</FormItem>
+										)}
+									/>
+
+									<FormField
+										control={form.control}
+										name="bloodGroup"
+										render={({ field }) => (
+											<FormItem>
+												<FormLabel>{t("blood_group")}</FormLabel>
+												<FormControl>
+													<Input
+														placeholder={t("blood_group_placeholder")}
+														{...field}
+													/>
+												</FormControl>
+												<FormMessage />
+											</FormItem>
+										)}
+									/>
+
+									<Button type="submit" disabled={loading}>
+										{loading ? t("sending") : t("submit")}
+									</Button>
+								</form>
+							</Form>
+						</CardContent>
+					</Card>
 				</div>
 			</section>
 
 			{/* Social Media */}
 			<section className="py-16">
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-					<h2 className="text-3xl font-bold mb-8">Connect With Us</h2>
+					<h2 className="text-3xl font-bold mb-8">{t("social_title")}</h2>
 					<div className="flex justify-center gap-8">
 						<a
 							href="https://www.facebook.com/share/1KnMEixm8R/"
@@ -134,7 +243,9 @@ export default function Contact() {
 							<div className="p-4 bg-red-50 rounded-full group-hover:bg-red-100 transition-colors">
 								<FacebookLogo className="h-8 w-8 text-red-600" />
 							</div>
-							<span className="block mt-2 text-sm text-gray-600">Facebook</span>
+							<span className="block mt-2 text-sm text-gray-600">
+								{t("facebook")}
+							</span>
 						</a>
 						<a
 							href="https://x.com/shrisarthi"
@@ -145,7 +256,9 @@ export default function Contact() {
 							<div className="p-4 bg-red-50 rounded-full group-hover:bg-red-100 transition-colors flex">
 								<TwitterLogo className="h-8 w-8 text-red-600" />
 							</div>
-							<span className="block mt-2 text-sm text-gray-600">Twitter</span>
+							<span className="block mt-2 text-sm text-gray-600">
+								{t("twitter")}
+							</span>
 						</a>
 						<a
 							href="https://www.instagram.com/shrisarthisewasansthan"
@@ -157,7 +270,7 @@ export default function Contact() {
 								<InstagramLogo className="h-8 w-8 text-red-600" />
 							</div>
 							<span className="block mt-2 text-sm text-gray-600">
-								Instagram
+								{t("instagram")}
 							</span>
 						</a>
 					</div>

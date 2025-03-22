@@ -1,19 +1,31 @@
 {
-	"Contact": {
+	"contact": {
 		"title": "Contact Us",
-		"description": "Get in touch with us to learn more about our initiatives.",
-		"visitUs": {
-			"title": "Visit Us",
-			"subtitle": "Our Location",
-			"address": "Ballia, Uttar Pradesh, India"
-		},
-		"form": {
-			"title": "Register Your Details",
-			"name": "Full Name",
-			"contact": "Contact Number",
-			"bloodGroup": "Blood Group",
-			"submit": "Submit",
-			"success": "Your details have been submitted successfully!"
-		}
+		"description": "Get in touch with us to learn more about our initiatives or to contribute to our cause.",
+		"visit": "Visit Us",
+		"visit_description": "Our Location",
+		"address": "Ballia, Uttar Pradesh, India",
+		"email": "Email Us",
+		"email_description": "Get in Touch",
+		"call": "Call Us",
+		"call_description": "Speak with Us",
+		"phone": "+91 8400834051",
+		"form_title": "Contact Us",
+		"name": "Full Name",
+		"name_placeholder": "John Doe",
+		"contact_palceholder": "+91 9876543210",
+		"contact": "Contact Number",
+		"blood_group": "Blood Group",
+		"blood_group_placeholder": "O+, A-, B+, etc.",
+		"submit": "Submit",
+		"sending": "Sending...",
+		"success_message": "Message sent successfully!",
+		"success_message_description": "We'll get back to you soon.",
+		"error": "Error",
+		"error_message": "Something went wrong, please try again.",
+		"social_title": "Connect With Us",
+		"facebook": "Facebook",
+		"twitter": "Twitter",
+		"instagram": "Instagram"
 	}
 }
