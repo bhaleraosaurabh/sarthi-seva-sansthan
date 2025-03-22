@@ -1,0 +1,15 @@
+{
+	"Navigation": {
+		"website-name": "श्री सारथी सेवा संस्थान",
+		"home": "होम",
+		"about": "हमारे बारे में",
+		"services": "सेवाएं",
+		"objectives": "उद्देश्य",
+		"gallery": "गैलरी",
+		"contact": "संपर्क करें"
+	},
+	"LocaleSwitcher": {
+		"label": "Change language",
+		"locale": "{locale, select, hi {🇮🇳 Hindi} en {🇮🇳 English} other {Unknown}}"
+	}
+}

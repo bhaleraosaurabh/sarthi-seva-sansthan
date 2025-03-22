@@ -1,0 +1,19 @@
+{
+	"Contact": {
+		"title": "Contact Us",
+		"description": "Get in touch with us to learn more about our initiatives.",
+		"visitUs": {
+			"title": "Visit Us",
+			"subtitle": "Our Location",
+			"address": "Ballia, Uttar Pradesh, India"
+		},
+		"form": {
+			"title": "Register Your Details",
+			"name": "Full Name",
+			"contact": "Contact Number",
+			"bloodGroup": "Blood Group",
+			"submit": "Submit",
+			"success": "Your details have been submitted successfully!"
+		}
+	}
+}

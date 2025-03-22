@@ -1,0 +1,54 @@
+{
+	"HomePage": {
+		"hero": {
+			"title": "Empowering Communities Since 2019",
+			"subtitle": "Together we can create a better future for all",
+			"cta": {
+				"primary": "Join Our Mission",
+				"secondary": "Learn More"
+			}
+		},
+		"count-section": {
+			"lives-touched": {
+				"count": "1000+",
+				"text": "Lives Touched"
+			},
+			"blood-donations": {
+				"count": "500+",
+				"text": "Blood Donations"
+			},
+			"marriages": {
+				"count": "200+",
+				"text": "Marriages Supported"
+			},
+			"trees-planted": {
+				"count": "100+",
+				"text": "Trees Planted"
+			}
+		},
+		"initiatives": {
+			"title": "Our Key Initiatives",
+			"campaign": {
+				"title": "The Uddan Campaign",
+				"description": "Free education for children from slum areas"
+			},
+			"medical": {
+				"title": "Medical Assistance",
+				"description": "Healthcare support for the underprivileged"
+			},
+			"marriage": {
+				"title": "Marriage Support",
+				"description": "Assistance for orphaned and helpless daughters"
+			},
+			"environment": {
+				"title": "Har Gaon Peepal",
+				"description": "Environmental conservation initiative"
+			}
+		},
+		"joining": {
+			"title": "Join Us in Making a Difference",
+			"description": "Your support can help us reach more people in need",
+			"button": "Get Involved"
+		}
+	}
+}

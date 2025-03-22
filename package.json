@@ -16,6 +16,7 @@
 		"fs": "^0.0.1-security",
 		"leaflet": "^1.9.4",
 		"next": "15.1.7",
+		"next-intl": "^4.0.2",
 		"postcss": "^8.5.2",
 		"react": "^19.0.0",
 		"react-dom": "^19.0.0",

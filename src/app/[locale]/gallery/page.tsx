@@ -1,6 +1,6 @@
-import GalleryGrid from "@/components/gallery";
 import { promises as fs } from "fs";
 import path from "node:path";
+import GalleryGrid from "@/components/gallery";
 
 const images = [
 	{

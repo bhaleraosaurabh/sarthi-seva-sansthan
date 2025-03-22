@@ -1,4 +1,4 @@
-import { Heart, Medal, Users } from "@phosphor-icons/react/dist/ssr";
+import { Users } from "@phosphor-icons/react/dist/ssr";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -17,7 +17,7 @@ export default function About() {
 			</section>
 
 			{/* Mission & Vision */}
-			<section className="py-16">
+			{/* <section className="py-16">
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 					<div className="grid md:grid-cols-2 gap-12">
 						<div className="bg-white p-8 rounded-lg shadow-md border border-gray-100">
@@ -89,7 +89,7 @@ export default function About() {
 						</div>
 					</div>
 				</div>
-			</section>
+			</section> */}
 
 			{/* Leadership */}
 			<section className="py-16 bg-red-50">
