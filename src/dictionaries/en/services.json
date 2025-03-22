@@ -1,0 +1,61 @@
+{
+	"services-page": {
+		"title": "Our Services",
+		"description": "Comprehensive support and assistance for those in need through our various initiatives.",
+		"sections": {
+			"blood_donation": {
+				"title": "Blood Donation Support",
+				"description": "Organizing blood donation drives and maintaining a network of donors to ensure timely availability of blood for patients in need.",
+				"features": {
+					"feature_1": "Regular donation camps",
+					"feature_2": "Emergency support"
+				}
+			},
+			"education": {
+				"title": "The Uddan Campaign",
+				"description": "Free education initiative for children from slum areas, providing them with opportunities for a better future.",
+				"features": {
+					"feature_1": "Quality education",
+					"feature_2": "Learning materials"
+				}
+			},
+			"marriage_support": {
+				"title": "Marriage Support",
+				"description": "Economic assistance for marriages of orphaned and financially weak daughters.",
+				"features": {
+					"feature_1": "Financial aid",
+					"feature_2": "Ceremony support"
+				}
+			},
+			"medical_assistance": {
+				"title": "Medical Assistance",
+				"description": "Healthcare support for destitute and financially weak individuals.",
+				"features": {
+					"feature_1": "Treatment support",
+					"feature_2": "Medicine provision"
+				}
+			},
+			"environmental_protection": {
+				"title": "Har Gaon Peepal Abhiyan",
+				"description": "Environmental conservation initiative promoting tree planting and ecological awareness.",
+				"features": {
+					"feature_1": "Tree plantation",
+					"feature_2": "Environmental education"
+				}
+			},
+			"animal_welfare": {
+				"title": "Bezubaan Ki Awaaz",
+				"description": "Animal welfare initiative providing care and support for street animals.",
+				"features": {
+					"feature_1": "Animal feeding",
+					"feature_2": "Medical care"
+				}
+			}
+		},
+		"cta": {
+			"title": "Need Our Support?",
+			"description": "We're here to help. Reach out to us today.",
+			"button": "Contact Us"
+		}
+	}
+}

@@ -1,72 +1,80 @@
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
+import { useTranslations } from "next-intl";
 
 const Footer = () => {
+	const t = useTranslations("footer");
+
 	return (
 		<footer className="bg-red-600 text-white py-8">
 			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 				<div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 					<div>
-						<h3 className="text-lg font-semibold mb-4">Contact Us</h3>
-						<p>Ballia, Uttar Pradesh</p>
-						<p>Email: shrisarthisevasansthan@gmail.com</p>
-						<p>Phone: +91 8400834051</p>
+						<h3 className="text-lg font-semibold mb-4">{t("contactUs")}</h3>
+						<p>{t("address")}</p>
+						<p>{t("email")}</p>
+						<p>{t("phone")}</p>
 					</div>
 					<div>
-						<h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+						<h3 className="text-lg font-semibold mb-4">{t("quickLinks")}</h3>
 						<ul className="space-y-2">
 							<li>
 								<Link href="/about" className="hover:underline">
-									About Us
+									{t("aboutUs")}
 								</Link>
 							</li>
 							<li>
 								<Link href="/services" className="hover:underline">
-									Our Services
+									{t("ourServices")}
+								</Link>
+							</li>
+							<li>
+								<Link href="/services" className="hover:underline">
+									{t("objectives")}
 								</Link>
 							</li>
 							<li>
 								<Link href="/gallery" className="hover:underline">
-									Gallery
+									{t("gallery")}
 								</Link>
 							</li>
 							<li>
 								<Link href="/contact" className="hover:underline">
-									Contact
+									{t("contact")}
 								</Link>
 							</li>
 						</ul>
 					</div>
 					<div>
-						<h3 className="text-lg font-semibold mb-4">Follow Us</h3>
+						<h3 className="text-lg font-semibold mb-4">{t("followUs")}</h3>
 						<div className="flex space-x-4">
 							<Link
 								href="https://www.facebook.com/share/1KnMEixm8R/"
 								className="hover:text-red-200"
 								target="_blank"
 							>
-								Facebook
+								{t("facebook")}
 							</Link>
 							<Link
 								href="https://x.com/shrisarthi"
 								className="hover:text-red-200"
 								target="_blank"
 							>
-								Twitter
+								{t("twitter")}
 							</Link>
 							<Link
 								href="https://www.instagram.com/shrisarthisewasansthan"
 								className="hover:text-red-200"
 								target="_blank"
 							>
-								Instagram
+								{t("instagram")}
 							</Link>
 						</div>
 					</div>
 				</div>
 				<div className="mt-8 pt-8 border-t border-red-500 text-center">
 					<p className="flex items-center justify-center gap-2">
-						<span>Made by</span>
-						<Link href={"https://saurabhbhalerao.com"}> Saurabh Bhalerao</Link>
+						<span>{t("madeBy")}</span>
+						<Link href="https://saurabhbhalerao.com">{t("developerName")}</Link>
 					</p>
 				</div>
 			</div>

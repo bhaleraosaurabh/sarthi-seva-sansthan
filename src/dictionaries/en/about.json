@@ -1,0 +1,190 @@
+{
+	"about": {
+		"title": "About Us",
+		"description": "Dedicated to serving humanity and creating positive change in our communities since 2019.",
+		"members": {
+			"title": "Our Members",
+			"content": [
+				{
+					"name": "Dhan Ji Pandey",
+					"image": "/dhan_ji_pandey.jpg",
+					"designation": "Treasurer"
+				},
+				{
+					"name": "Priyanka Kumari",
+					"image": "/priyanka_kumari.jpg",
+					"designation": "Member"
+				},
+				{
+					"name": "Abhishek Singh",
+					"image": "/abhishek_singh.jpg",
+					"designation": "Member"
+				},
+				{
+					"name": "Rohit Sharma",
+					"image": "/rohit_sharma.jpg",
+					"designation": "Member"
+				},
+				{
+					"name": "Prince Giri",
+					"image": "/prince_giri.jpg",
+					"designation": "Member"
+				},
+				{
+					"name": "Shikha",
+					"image": "/shikha.jpg",
+					"designation": "Member"
+				}
+			]
+		},
+		"journey": {
+			"title": "Journey of Shri Sarthi Seva Sansthan (2019–2025)",
+			"description": "Shri Sarthi Seva Sansthan, founded by Sanjeev Giri in 2019, is a grassroots organization born out of a deep commitment to social welfare. Despite starting as an unregistered initiative, the Sansthan quickly gained recognition for its impactful work in Ballia and surrounding regions. Officially registered under the government in 2023, the organization continues its mission to serve society in 2025, with an expanded vision and reach.",
+			"sections": [
+				{
+					"title": "2019–2022: Early Years of Service",
+					"content": [
+						{
+							"heading": "Foundation and Motivation",
+							"points": [
+								"The organization began informally under the leadership of Sanjeev Giri.",
+								"Initial efforts focused on providing basic support to the poor, assisting accident victims, and feeding street animals."
+							]
+						},
+						{
+							"heading": "Community Impact",
+							"points": [
+								"Distributed food, clothing, and medicines to needy families.",
+								"Assisted flood-affected families in Ballia, providing shelter and rehabilitation.",
+								"Promoted blood donation and encouraged individuals to contribute to saving lives."
+							]
+						},
+						{
+							"heading": "COVID-19 Relief Efforts",
+							"points": [
+								"Distributed food, masks, and sanitizers.",
+								"Facilitated transportation for stranded migrant workers and continued feeding stray animals."
+							]
+						}
+					]
+				},
+				{
+					"title": "2023: Official Registration and Formalization",
+					"content": [
+						{
+							"heading": "Government Registration",
+							"points": [
+								"In 2023, Shri Sarthi Seva Sansthan was officially registered."
+							]
+						},
+						{
+							"heading": "Expanded Efforts",
+							"points": [
+								"Advocated for the establishment of a medical college in Ballia.",
+								"Organized large-scale blood donation drives, flood relief efforts, and community support programs."
+							]
+						}
+					]
+				},
+				{
+					"title": "2024: Strengthening the Mission",
+					"content": [
+						{
+							"heading": "Healthcare and Advocacy",
+							"points": [
+								"Continued the fight for improved healthcare facilities in Ballia.",
+								"Assisted numerous individuals with medical needs."
+							]
+						}
+					]
+				},
+				{
+					"title": "2025: Continuing the Legacy of Service",
+					"content": [
+						{
+							"heading": "Enhanced Operations",
+							"points": [
+								"By 2025, Shri Sarthi Seva Sansthan has become a well-respected name in the region."
+							]
+						},
+						{
+							"heading": "Future Vision",
+							"points": [
+								"Aiming to build educational and vocational training centers for the poor.",
+								"Expanding environmental programs to combat climate change."
+							]
+						}
+					]
+				}
+			]
+		},
+		"joining": {
+			"title": "Join Us in Making a Difference",
+			"description": "Your support can help us reach more people in need",
+			"button": "Get Involved"
+		},
+		"leadership": {
+			"title": "Our Leadership",
+			"sanjeev": {
+				"name": "Sanjeev Giri",
+				"designation": "Founder",
+				"bio": "Sanjeev Giri, the dedicated founder of Shri Sarthi Seva Sansthan, is a compassionate leader who turned his personal struggles into a mission to serve humanity. Coming from a poor family, he experienced the harsh realities of poverty, corruption, and a lack of basic facilities. These challenges shaped his vision to create an organization that could address these issues and bring positive change to society.",
+				"inspiration": "One of his most significant inspirations came from witnessing the poor state of healthcare in Ballia. The lack of medical facilities and infrastructure pushed him to lead a persistent campaign for the establishment of a medical college in the district, aiming to provide accessible and quality healthcare for all.",
+				"commitment": "Sanjeev Giri's unwavering commitment to social service has transformed Shri Sarthi Seva Sansthan into a beacon of hope for the marginalized and underserved. His dedication to improving healthcare, supporting the poor, aiding accident victims, and conserving the environment continues to inspire and uplift communities, leaving an indelible mark on society.",
+				"initiatives-title": "Key initiatives",
+				"initiatives": [
+					{
+						"title": "Flood Relief",
+						"description": "Supporting flood-affected families with essential resources and rehabilitation."
+					},
+					{
+						"title": "Advocacy for Healthcare",
+						"description": "Fighting for improved medical facilities in Ballia."
+					},
+					{
+						"title": "Blood Donation Drives",
+						"description": "Organizing campaigns to save lives in critical situations."
+					},
+					{
+						"title": "Marriage Support for the Poor",
+						"description": "Providing financial assistance for underprivileged families."
+					},
+					{
+						"title": "Support for Accident Victims",
+						"description": "Offering immediate help to those in distress."
+					},
+					{
+						"title": "Environmental Conservation",
+						"description": "Promoting sustainability and awareness for a greener future."
+					},
+					{
+						"title": "Animal Welfare",
+						"description": "Rescuing and caring for street animals to ensure their safety."
+					}
+				]
+			},
+			"avitesh": {
+				"name": "Avitesh Singh",
+				"designation": "President",
+				"bio": "Avitesh Singh, the esteemed President of Shri Sarthi Seva Sansthan, exemplifies the spirit of dedication and compassion in the field of social service. Born into a humble middle-class family, his life has been a testament to resilience and perseverance. From a young age, he exhibited an innate curiosity and passion for helping others, a drive that has been the cornerstone of his journey.",
+				"inspiration": "During his early years, Avitesh faced numerous struggles in sustaining himself, yet these challenges only strengthened his resolve to bring about meaningful change in society. He emerged as the driving force behind Shri Sarthi Seva Sansthan, meticulously planning and implementing its social initiatives. Under his leadership, the organization has become a beacon of hope for countless individuals in need.",
+				"commitment": "Known for his polite demeanor and unwavering commitment to helping others, Avitesh Singh has earned widespread admiration and respect. His vision for Shri Sarthi Seva Sansthan is rooted in empathy and inclusivity, aiming to create a society where every individual, regardless of their circumstances, has the opportunity to lead a dignified life. Through his tireless efforts, Avitesh continues to inspire others to join hands in building a better and more equitable world.",
+				"initiatives-title": "Key initiatives",
+				"initiatives": [
+					{
+						"title": "Disaster Management",
+						"description": "Leading relief efforts to provide timely aid and support to affected communities."
+					},
+					{
+						"title": "Healthcare Accessibility",
+						"description": "Ensuring that underprivileged individuals receive essential medical care."
+					},
+					{
+						"title": "Education for the Marginalized",
+						"description": "Promoting education as a means to uplift children from disadvantaged backgrounds."
+					}
+				]
+			}
+		}
+	}
+}

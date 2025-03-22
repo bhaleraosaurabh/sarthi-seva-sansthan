@@ -1,12 +1,15 @@
 "use client";
 
 import { List, X } from "@phosphor-icons/react";
-import Link from "next/link";
+import { useTranslations } from "next-intl";
+
+import { Link } from "@/i18n/navigation";
 import { useState } from "react";
+import LocaleSwitcher from "./locale-switcher";
 
 const Navbar = () => {
 	const [isOpen, setIsOpen] = useState(false);
-
+	const t = useTranslations("Navigation");
 	return (
 		<nav className="bg-red-600 text-white">
 			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -19,7 +22,7 @@ const Navbar = () => {
 								className="h-12 w-12"
 							/>
 							<span className="ml-2 text-lg font-semibold">
-								Shri Sarthi Seva Sansthan
+								{t("website-name")}
 							</span>
 						</Link>
 					</div>
@@ -27,32 +30,39 @@ const Navbar = () => {
 					<div className="hidden md:block">
 						<div className="ml-10 flex items-baseline space-x-4">
 							<Link href="/" className="hover:bg-red-700 px-3 py-2 rounded-md">
-								Home
+								{t("home")}
 							</Link>
 							<Link
 								href="/about"
 								className="hover:bg-red-700 px-3 py-2 rounded-md"
 							>
-								About
+								{t("about")}
+							</Link>
+							<Link
+								href="/objectives"
+								className="hover:bg-red-700 px-3 py-2 rounded-md"
+							>
+								{t("objectives")}
 							</Link>
 							<Link
 								href="/services"
 								className="hover:bg-red-700 px-3 py-2 rounded-md"
 							>
-								Services
+								{t("services")}
 							</Link>
 							<Link
 								href="/gallery"
 								className="hover:bg-red-700 px-3 py-2 rounded-md"
 							>
-								Gallery
+								{t("gallery")}
 							</Link>
 							<Link
 								href="/contact"
 								className="hover:bg-red-700 px-3 py-2 rounded-md"
 							>
-								Contact
+								{t("contact")}
 							</Link>
+							<LocaleSwitcher />
 						</div>
 					</div>
 
@@ -75,32 +85,33 @@ const Navbar = () => {
 							href="/"
 							className="block hover:bg-red-700 px-3 py-2 rounded-md"
 						>
-							Home
+							{t("home")}
 						</Link>
 						<Link
 							href="/about"
 							className="block hover:bg-red-700 px-3 py-2 rounded-md"
 						>
-							About
+							{t("about")}
 						</Link>
 						<Link
 							href="/services"
 							className="block hover:bg-red-700 px-3 py-2 rounded-md"
 						>
-							Services
+							{t("services")}
 						</Link>
 						<Link
 							href="/gallery"
 							className="block hover:bg-red-700 px-3 py-2 rounded-md"
 						>
-							Gallery
+							{t("gallery")}
 						</Link>
 						<Link
 							href="/contact"
 							className="block hover:bg-red-700 px-3 py-2 rounded-md"
 						>
-							Contact
+							{t("contact")}
 						</Link>
+						<LocaleSwitcher />
 					</div>
 				</div>
 			)}

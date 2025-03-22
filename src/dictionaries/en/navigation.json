@@ -1,0 +1,15 @@
+{
+	"Navigation": {
+		"website-name": "Shri Sarthi Seva Sansthan",
+		"home": "Home",
+		"about": "About",
+		"objectives": "Objectives",
+		"services": "Services",
+		"gallery": "Gallery",
+		"contact": "Contact"
+	},
+	"LocaleSwitcher": {
+		"label": "Change language",
+		"locale": "{locale, select, hi {🇮🇳 Hindi} en {🇮🇳 English} other {Unknown}}"
+	}
+}
