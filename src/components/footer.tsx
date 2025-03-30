@@ -78,10 +78,16 @@ const Footer = () => {
 						</div>
 					</div>
 				</div>
-				<div className="mt-8 pt-8 border-t border-red-500 text-center">
+				<div className="mt-8 pt-8 border-t border-red-500 text-center flex justify-center items-center gap-4">
 					<p className="flex items-center justify-center gap-2">
 						<span>{t("madeBy")}</span>
 						<Link href="https://saurabhbhalerao.com">{t("developerName")}</Link>
+					</p>
+					<p className="flex items-center justify-center gap-2">
+						<span>{t("advisor")}</span>
+						<Link href="https://www.linkedin.com/in/abhinandan-mishra-b47688277/">
+							{t("advisorName")}
+						</Link>
 					</p>
 				</div>
 			</div>
