@@ -26,6 +26,7 @@ import {
 	MapPin,
 	Phone,
 	TwitterLogo,
+	YoutubeLogo,
 } from "@phosphor-icons/react";
 import { useTranslations } from "next-intl";
 import { useState } from "react";
@@ -289,6 +290,32 @@ export default function Contact() {
 							</div>
 							<span className="block mt-2 text-sm text-gray-600">
 								{t("instagram")}
+							</span>
+						</a>
+						<a
+							href="https://www.youtube.com/@shrisarthisevasansthan."
+							// className="group"
+							target="_blank"
+							rel="noreferrer"
+						>
+							<div className="p-4 bg-red-50 rounded-full group-hover:bg-red-100 transition-colors">
+								<InstagramLogo className="h-8 w-8 text-red-600" />
+							</div>
+							<span className="block mt-2 text-sm text-gray-600">
+								{t("instagram")}
+							</span>
+						</a>
+						<a
+							href="https://www.instagram.com/shrisarthisewasansthan"
+							// className="group"
+							target="_blank"
+							rel="noreferrer"
+						>
+							<div className="p-4 bg-red-50 rounded-full group-hover:bg-red-100 transition-colors">
+								<YoutubeLogo className="h-8 w-8 text-red-600" />
+							</div>
+							<span className="block mt-2 text-sm text-gray-600">
+								{t("youtube")}
 							</span>
 						</a>
 					</div>
