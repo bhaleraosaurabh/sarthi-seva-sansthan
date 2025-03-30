@@ -17,6 +17,8 @@
 		"contact": "Contact Number",
 		"blood_group": "Blood Group",
 		"blood_group_placeholder": "O+, A-, B+, etc.",
+		"form_address": "Address",
+		"form_address_placeholder": "Address",
 		"submit": "Submit",
 		"sending": "Sending...",
 		"success_message": "Message sent successfully!",

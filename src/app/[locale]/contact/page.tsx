@@ -39,12 +39,13 @@ const ContactSchema = z.object({
 		.min(10, "Invalid phone number")
 		.max(15, "Invalid phone number"),
 	bloodGroup: z.string().min(1, "Blood group is required"),
+	address: z.string().min(1, "Address is required"),
 });
 
 export default function Contact() {
 	const form = useForm({
 		resolver: zodResolver(ContactSchema),
-		defaultValues: { name: "", contact: "", bloodGroup: "" },
+		defaultValues: { name: "", contact: "", bloodGroup: "", address: "" },
 	});
 	const t = useTranslations("contact");
 	const [loading, setLoading] = useState(false);
@@ -211,6 +212,23 @@ export default function Contact() {
 												<FormControl>
 													<Input
 														placeholder={t("blood_group_placeholder")}
+														{...field}
+													/>
+												</FormControl>
+												<FormMessage />
+											</FormItem>
+										)}
+									/>
+
+									<FormField
+										control={form.control}
+										name="address"
+										render={({ field }) => (
+											<FormItem>
+												<FormLabel>{t("form_address")}</FormLabel>
+												<FormControl>
+													<Input
+														placeholder={t("form_address_placeholder")}
 														{...field}
 													/>
 												</FormControl>

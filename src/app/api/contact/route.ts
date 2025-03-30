@@ -5,9 +5,9 @@ export const runtime = "edge"; // Use the Edge runtime for better performance
 
 export async function POST(req: Request) {
 	try {
-		const { name, contact, bloodGroup } = await req.json();
+		const { name, contact, bloodGroup, address } = await req.json();
 
-		if (!name || !contact || !bloodGroup) {
+		if (!name || !contact || !bloodGroup || !address) {
 			return new Response(
 				JSON.stringify({ error: "All fields are required" }),
 				{ status: 400 },
@@ -16,7 +16,7 @@ export async function POST(req: Request) {
 
 		const resend = new Resend(process.env.RESEND_API_KEY);
 
-		const emailHtml = ContactEmail({ name, contact, bloodGroup });
+		const emailHtml = ContactEmail({ name, contact, bloodGroup, address });
 
 		await resend.emails.send({
 			from: "shrisarthisevasansthan@gmail.com",

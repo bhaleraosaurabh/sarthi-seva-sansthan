@@ -2,8 +2,10 @@ import {
 	Building,
 	Drop,
 	FirstAid,
+	FirstAidKit,
 	Heart,
 	PawPrint,
+	TShirt,
 	TreeEvergreen,
 	Users,
 } from "@phosphor-icons/react/dist/ssr";
@@ -17,6 +19,8 @@ const serviceIcons = {
 	medical_assistance: FirstAid,
 	environmental_protection: TreeEvergreen,
 	animal_welfare: PawPrint,
+	essentials_for_poor: TShirt,
+	road_accidents: FirstAidKit,
 };
 
 export default function Services() {

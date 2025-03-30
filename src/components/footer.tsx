@@ -49,24 +49,31 @@ const Footer = () => {
 						<div className="flex space-x-4">
 							<Link
 								href="https://www.facebook.com/share/1KnMEixm8R/"
-								className="hover:text-red-200"
+								className="hover:text-red-200 cursor-pointer"
 								target="_blank"
 							>
 								{t("facebook")}
 							</Link>
 							<Link
 								href="https://x.com/shrisarthi"
-								className="hover:text-red-200"
+								className="hover:text-red-200 cursor-pointer"
 								target="_blank"
 							>
 								{t("twitter")}
 							</Link>
 							<Link
 								href="https://www.instagram.com/shrisarthisewasansthan"
-								className="hover:text-red-200"
+								className="hover:text-red-200 cursor-pointer"
 								target="_blank"
 							>
 								{t("instagram")}
+							</Link>
+							<Link
+								href="https://www.youtube.com/@shrisarthisevasansthan."
+								className="hover:text-red-200 cursor-pointer"
+								target="_blank"
+							>
+								{t("youtube")}
 							</Link>
 						</div>
 					</div>
