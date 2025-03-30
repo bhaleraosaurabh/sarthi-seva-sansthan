@@ -11,12 +11,14 @@ interface ContactEmailProps {
 	name: string;
 	contact: string;
 	bloodGroup: string;
+	address: string;
 }
 
 export default function ContactEmail({
 	name,
 	contact,
 	bloodGroup,
+	address,
 }: ContactEmailProps) {
 	return (
 		<Html>
@@ -38,6 +40,9 @@ export default function ContactEmail({
 					</Text>
 					<Text>
 						<strong>Blood Group:</strong> {bloodGroup}
+					</Text>
+					<Text>
+						<strong>Blood Group:</strong> {address}
 					</Text>
 				</Container>
 			</Body>

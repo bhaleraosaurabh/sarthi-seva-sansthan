@@ -36,19 +36,35 @@
 				}
 			},
 			"environmental_protection": {
-				"title": "Har Gaon Peepal Abhiyan",
-				"description": "Environmental conservation initiative promoting tree planting and ecological awareness.",
+				"title": "Environmental Protection – 'Har Gaon Peepal Abhiyan':",
+				"description": "Through the Har Gaon Peepal Abhiyan, the Sansthan promotes environmental conservation by encouraging tree planting, particularly of the Peepal tree, known for its ecological and cultural significance.",
 				"features": {
 					"feature_1": "Tree plantation",
 					"feature_2": "Environmental education"
 				}
 			},
 			"animal_welfare": {
-				"title": "Bezubaan Ki Awaaz",
-				"description": "Animal welfare initiative providing care and support for street animals.",
+				"title": "Animal and Bird Welfare – 'Bezubaan Ki Awaaz Abhiyan':",
+				"description": "Under the Bezubaan Ki Awaaz Abhiyan, the organization works to care for animals and birds, providing food, shelter, and medical care for stray and injured creatures.",
 				"features": {
 					"feature_1": "Animal feeding",
 					"feature_2": "Medical care"
+				}
+			},
+			"essentials_for_poor": {
+				"title": "Providing Essentials to the Poor:",
+				"description": "The organization distributes blankets, clothes, and thatch to destitute and helpless individuals, particularly during harsh winters, ensuring basic comfort and dignity.",
+				"features": {
+					"feature_1": "Blankets",
+					"feature_2": "Clothes"
+				}
+			},
+			"road_accidents": {
+				"title": "Immediate First Aid for Road Accident Victims:",
+				"description": "The Sansthan provides immediate first aid and support to individuals injured in road accidents, saving lives through prompt intervention.",
+				"features": {
+					"feature_1": "First Aid",
+					"feature_2": "Additional Support"
 				}
 			}
 		},
