@@ -1,7 +1,7 @@
 import ContactEmail from "@/emails/ContactEmail";
 import { Resend } from "resend";
 
-export const runtime = "edge"; // Use the Edge runtime for better performance
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(req: Request) {
 	try {
@@ -10,28 +10,21 @@ export async function POST(req: Request) {
 		if (!name || !contact || !bloodGroup || !address) {
 			return new Response(
 				JSON.stringify({ error: "All fields are required" }),
-				{ status: 400 },
+				{ status: 400, headers: { "Content-Type": "application/json" } },
 			);
 		}
-
-		const resend = new Resend(process.env.RESEND_API_KEY);
-
-		const emailHtml = ContactEmail({ name, contact, bloodGroup, address });
-
-		await resend.emails.send({
-			from: "shrisarthisevasansthan@gmail.com",
+		const { data, error } = await resend.emails.send({
+			from: "no-reply@shrisarthisevasansthan.com",
 			to: "shrisarthisevasansthan@gmail.com",
 			subject: "New Contact Form Submission",
-			react: emailHtml,
+			react: ContactEmail({ name, contact, bloodGroup, address }),
 		});
 
-		return new Response(
-			JSON.stringify({ message: "Email sent successfully!" }),
-			{ status: 200 },
-		);
+		if (error) {
+			return Response.json({ error }, { status: 500 });
+		}
+		return Response.json(data);
 	} catch (error) {
-		return new Response(JSON.stringify({ error: "Failed to send email" }), {
-			status: 500,
-		});
+		return Response.json({ error }, { status: 500 });
 	}
 }

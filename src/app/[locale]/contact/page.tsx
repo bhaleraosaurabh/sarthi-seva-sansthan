@@ -294,7 +294,7 @@ export default function Contact() {
 						</a>
 
 						<a
-							href="https://www.instagram.com/shrisarthisewasansthan"
+							href="https://www.youtube.com/@shrisarthisevasansthan."
 							// className="group"
 							target="_blank"
 							rel="noreferrer"
