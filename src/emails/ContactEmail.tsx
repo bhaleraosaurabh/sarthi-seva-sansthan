@@ -42,7 +42,7 @@ export default function ContactEmail({
 						<strong>Blood Group:</strong> {bloodGroup}
 					</Text>
 					<Text>
-						<strong>Blood Group:</strong> {address}
+						<strong>Address:</strong> {address}
 					</Text>
 				</Container>
 			</Body>
