@@ -53,6 +53,11 @@ export default async function RootLayout({
 									width={400}
 									height={300}
 								/>
+								<div className="p-4 flex justify-center items-center gap-1 flex-col text-sm">
+									<p>A/C no: 680601010050364</p>
+									<p>IFSC code: UBIN0568066</p>
+									<p>Branch: Nagra, Ballia-221711(U.P)</p>
+								</div>
 							</PopoverContent>
 						</Popover>
 					</div>
