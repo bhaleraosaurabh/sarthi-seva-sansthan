@@ -1,9 +1,9 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
+import { Link } from "@/i18n/navigation";
 import { Users } from "@phosphor-icons/react/dist/ssr";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
-import Link from "next/link";
 
 export default function About() {
 	const t = useTranslations("about");

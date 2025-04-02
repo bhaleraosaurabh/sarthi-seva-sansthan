@@ -1,3 +1,4 @@
+import { Link } from "@/i18n/navigation";
 import {
 	Building,
 	Drop,
@@ -10,7 +11,6 @@ import {
 	Users,
 } from "@phosphor-icons/react/dist/ssr";
 import { useTranslations } from "next-intl";
-import Link from "next/link";
 
 const serviceIcons = {
 	blood_donation: Drop,
